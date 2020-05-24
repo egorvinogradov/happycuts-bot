@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Bot Demo</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+<div class="debug">
+  <fieldset class="debugClient">
+    <legend>ID клиента</legend>
+    <select class="debugUserSelect">
+      <option value="001">001</option>
+      <option value="002">002</option>
+      <option value="003">003</option>
+    </select>
+    <button class="debugResetSession">Сбросить сессию</button>
+  </fieldset>
+  <fieldset class="debugEmployee">
+    <legend>Назначить сотрудника</legend>
+    <select class="debugEmployeeSelect">
+      <option value="employee1">Екатерина Иванова</option>
+      <option value="employee2">Анна Петрова</option>
+      <option value="employee3">Борис Смирнов</option>
+    </select>
+    <br><input class="debugEmployeeWaitTime" type="number" placeholder="Ожидание, мин.">
+    <br><button class="debugEmployeeAssign">Назначить</button>
+  </fieldset>
+  <pre class="debugUserData"></pre>
+</div>
+
+
+<div class="container">
+  <div class="messages"></div>
+  <div class="input">
+    <textarea placeholder="Сообщение"></textarea>
+  </div>
+</div>
+
+<script src="utils.js"></script>
+<script src="messages.js"></script>
+<script src="bot.js"></script>
+<script src="demo.js"></script>
+
+</body>
+</html>

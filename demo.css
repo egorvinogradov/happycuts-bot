@@ -1,0 +1,155 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  --messenger-width: 370px;
+  --messenger-textarea-height: 60px;
+  background: #eee;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: var(--messenger-width);
+  background: white;
+  box-shadow: -1px 0 5px rgba(0,0,0,.2);
+}
+
+.messages {
+  position: absolute;
+  top: 0;
+  bottom: var(--messenger-textarea-height);
+  right: 0;
+  left: 0;
+  overflow-y: scroll;
+  padding: 20px;
+  background: url('bg.png');
+  background-size: 830px;
+}
+
+.messages .user,
+.messages .bot {
+  border-radius: 8px;
+  background: #f8f8f8;
+  padding: 8px 10px;
+  width: 80%;
+  margin: 0 0 12px 0;
+  white-space: pre-wrap;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.messages .bot + .bot,
+.messages .user + .user {
+  margin-top: -9px;
+}
+
+.messages .user {
+  margin-left: 20%;
+  background: #E6FDCC;
+  border-color: #cae1b2;
+}
+
+.messages img {
+  padding: 3px !important;
+}
+
+.input {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: var(--messenger-textarea-height);
+  background: #F0F0F0;
+  padding: 10px 19px;
+}
+
+textarea {
+  border: 0;
+  padding: 9px 10px;
+  outline: none;
+  width: 100%;
+  resize: none;
+  font-size: 15px;
+  border-radius: var(--messenger-textarea-height);
+  height: calc(var(--messenger-textarea-height) - 20px);
+}
+
+.debug {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.debug fieldset {
+  border: 1px solid rgba(0,0,0,.1);
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.debug button {
+  border: 0;
+  background: white;
+  box-shadow: 0 2px 2px rgba(0,0,0,.1);
+  border-radius: 3px;
+  height: 25px;
+  padding: 0 10px;
+  vertical-align: top;
+}
+
+.debug select {
+  height: 26px;
+  vertical-align: top;
+}
+
+.debug input {
+  border: 1px solid rgba(0,0,0,.2);
+  background: white;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,.1);
+  height: 25px;
+  padding: 0 8px;
+  vertical-align: top;
+}
+
+.debugClient select {
+  margin-right: 7px;
+}
+
+.debugEmployee {
+  pointer-events: none;
+  opacity: .3;
+  transition: box-shadow 600ms;
+}
+
+.selectingEmployee .debugEmployee {
+  pointer-events: all;
+  opacity: 1;
+  box-shadow: 0 7px 15px 2px rgba(0, 0, 0, 0.1);
+  background: yellow;
+}
+
+.selectingEmployee .debugEmployee legend {
+  font-weight: bold;
+  position: relative;
+  top: -2px;
+}
+
+.debugEmployee select,
+.debugEmployee input {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.debugEmployee button {
+  margin-bottom: 5px;
+}
+
+.debugUserData {
+  font: 14px/18px Monaco;
+}
