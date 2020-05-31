@@ -1,4 +1,4 @@
-const MESSAGE_DICTIONARY_COVID = [
+export const MESSAGE_DICTIONARY_COVID = [
   `1. Каждый день мастера меряют температуру. Мы не оправим им заказы, пока они не пришлют свежее фото градусника.`,
   `2. Мастера работают только в респираторах класса FF2. Такие респираторы фильтруют мельчайшие нанометровые частицы, и не пропускают вирус. В таких респираторах работают доктора.`,
   `3. Мастера работают только в одноразовых перчатках. Когда мастер придет к вам, он/она попросит у вас разрешения помыть руки с мылом и вытрет их своим полотенцем, а потом при вас оденет новые перчатки.`,
@@ -6,7 +6,7 @@ const MESSAGE_DICTIONARY_COVID = [
 ];
 
 
-const MESSAGE_DICTIONARY_PRICING = `У нас простой прайс:
+export const MESSAGE_DICTIONARY_PRICING = `У нас простой прайс:
 
 Простая стижка – 600₽
 Средняя стижка – 700₽
@@ -23,7 +23,7 @@ const MESSAGE_DICTIONARY_PRICING = `У нас простой прайс:
 Когда мастер приедет к вам, объясните ему, что именно вы хотите, и мастер скажет, какая это услуга — простая, средняя или сложная.`;
 
 
-const MESSAGE_DICTIONARY_SUPPORT = `Чтобы связаться с нами,
+export const MESSAGE_DICTIONARY_SUPPORT = `Чтобы связаться с нами,
 
 позвоните на +7 (999) 712-2191‬
 
@@ -36,17 +36,17 @@ const MESSAGE_DICTIONARY_SUPPORT = `Чтобы связаться с нами,
 ---`;
 
 
-const MESSAGE_UNSUBSCRIBE = `Мы больше не будем присылать сообщения`;
+export const MESSAGE_UNSUBSCRIBE = `Мы больше не будем присылать сообщения`;
 
 
-const MESSAGE_UNKNOWN_ERROR = [
+export const MESSAGE_UNKNOWN_ERROR = [
   `Произошла неизвестная ошибка. Просим прощения!
 Пожалуйста, напишите «заново», чтобы начать сначала, или свяжитесь с нами.`,
   MESSAGE_DICTIONARY_SUPPORT,
 ];
 
 
-const MESSAGE_SELECT_SERVICE_START = `HappyCuts.ru — салон красоты у вас дома.
+export const MESSAGE_SELECT_SERVICE_START = `HappyCuts.ru — салон красоты у вас дома.
 Закажите парой кликов → Система найдет ближайшего к вам мастера → Мастер приедет через 30-50 минут.
 
 Что вы хотите заказать?
@@ -62,7 +62,7 @@ const MESSAGE_SELECT_SERVICE_START = `HappyCuts.ru — салон красоты
 «заново» – начать все сначала`;
 
 
-const MESSAGE_SELECT_SERVICE_NOT_PROVIDED_YET = `Мы еще запустили эту услугу :(
+export const MESSAGE_SELECT_SERVICE_NOT_PROVIDED_YET = `Мы еще запустили эту услугу :(
 Но мы очень активно работаем над этим, счет буквально на дни и недели. Как только мы это запустим, сразу пришлем вам сообщение.
 
 Хотите пока попробовать стрижки?
@@ -73,7 +73,7 @@ const MESSAGE_SELECT_SERVICE_NOT_PROVIDED_YET = `Мы еще запустили 
 «человек» – чтобы поговорить с живым оператором в любой момент`;
 
 
-const MESSAGE_SELECT_SERVICE_HAIRCUT = `Стрижка. У нас простой прайс:
+export const MESSAGE_SELECT_SERVICE_HAIRCUT = `Стрижка. У нас простой прайс:
 
 Простая стрижка – 600₽
 Средняя стрижка – 700₽
@@ -82,24 +82,22 @@ const MESSAGE_SELECT_SERVICE_HAIRCUT = `Стрижка. У нас простой
 Когда мастер приедет к вам, объясните ему, как хотите постричься, и он/она скажет, какая это стрижка — простая, средняя или сложная.`;
 
 
-const MESSAGE_ENTER_PHONE = `Чтобы найти мастера, напишите ваш телефон:`;
+export const MESSAGE_ENTER_PHONE = `Чтобы найти мастера, напишите ваш телефон:`;
 
+export const MESSAGE_ENTER_PHONE_ERROR = `Не получается распознать ваш телефон. Введите его еще раз в формате 8999001122:`;
 
-const MESSAGE_ENTER_PHONE_ERROR = `Не получается распознать ваш телефон. Введите его еще раз в формате 8999001122:`;
+export const MESSAGE_ENTER_ADDRESS = `Отлично! А теперь введите вашу улицу и номер дома, и мы найдем ближайших к вам свободных мастеров:`;
 
+export const MESSAGE_ENTER_ADDRESS_OUT_OF_AREA = `Пока только ЦАО :(`;
 
-const MESSAGE_ENTER_ADDRESS = `Отлично! А теперь введите вашу улицу и номер дома, и мы найдем ближайших к вам свободных мастеров:`;
+export const MESSAGE_ENTER_ADDRESS_MALFORMED = `Мы не можем найти такой адрес. Попробуйте ввести еще раз:`;
 
-const MESSAGE_ENTER_ADDRESS_OUT_OF_AREA = `Пока только ЦАО :(`;
+export const MESSAGE_STARTED_SEARCHING_EMPLOYEES = `Ищем свободных мастеров рядом с адресом Москва, <%= addressNormalized %>. Это может занять несколько минут.`;
 
-const MESSAGE_ENTER_ADDRESS_MALFORMED = `Мы не можем найти такой адрес. Попробуйте ввести еще раз:`;
-
-const MESSAGE_STARTED_SEARCHING_EMPLOYEES = `Ищем свободных мастеров рядом с адресом Москва, <%= addressNormalized %>. Это может занять несколько минут.`;
-
-const MESSAGE_EMPLOYEE_FOUND = `Мастер найден!
+export const MESSAGE_EMPLOYEE_FOUND = `Мастер найден!
 
 <%= fullName %> едет к вам по адресу Москва, <%= addressNormalized %> и будет у вас через <%= waitTimeString %>. <%= pronoun %> сейчас вам позвонит на <%= phoneNumber %>, чтобы подтвердить заказ.
 
 <%= firstName %> в респираторе и перчатках и продезинфицируют свой инструмент при вас перед началом работы.`;
 
-const MESSAGE_EMPLOYEE_FOUND_ENTER_APT_NUM = `Введите номер квартиры, подъезд, этаж, код домофона:`;
+export const MESSAGE_EMPLOYEE_FOUND_ENTER_APT_NUM = `Введите номер квартиры, подъезд, этаж, код домофона:`;

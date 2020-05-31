@@ -1,4 +1,6 @@
-class HCBot {
+import * as MESSAGES from './messages.js';
+
+export class HappyCutsBot {
 
   YANDEX_API_URL = 'https://geocode-maps.yandex.ru/1.x/?';
   YANDEX_API_KEY = '12138992-f270-44ce-bf45-3e42cab2bc3f';
@@ -61,6 +63,9 @@ class HCBot {
 
   // TODO: change in production
   sendMessage = (userId, textArray, imageUrl) => {
+
+    return textArray.toString();
+
     if (this.messageCallback) {
       setTimeout(() => {
         if (imageUrl) {
@@ -81,7 +86,7 @@ class HCBot {
   };
 
   sendStartMessage = (userId) => {
-    this.sendMessage(userId, MESSAGE_SELECT_SERVICE_START);
+    this.sendMessage(userId, MESSAGES.MESSAGE_SELECT_SERVICE_START);
   };
 
   // TODO: change in production
@@ -112,15 +117,15 @@ class HCBot {
     return this.getDictionaryResponse(userId, text, [
       {
         keywords: ['цены', 'цена', 'стоимость', 'сколько стоит'],
-        text: MESSAGE_DICTIONARY_PRICING,
+        text: MESSAGES.MESSAGE_DICTIONARY_PRICING,
       },
       {
         keywords: ['коронавирус', 'вирус', 'карантин'],
-        text: MESSAGE_DICTIONARY_COVID,
+        text: MESSAGES.MESSAGE_DICTIONARY_COVID,
       },
       {
         keywords: ['человек', 'оператор', 'поддержка', 'телефон', 'позвонить', 'перезвоните'],
-        text: MESSAGE_DICTIONARY_SUPPORT,
+        text: MESSAGES.MESSAGE_DICTIONARY_SUPPORT,
       },
       {
         keywords: ['заново', 'сначала', 'еще раз'],
@@ -130,14 +135,14 @@ class HCBot {
             stage: this.STAGES.SELECT_SERVICE,
             userId,
           });
-          return MESSAGE_SELECT_SERVICE_START;
+          return MESSAGES.MESSAGE_SELECT_SERVICE_START;
         },
       },
       {
         keywords: ['стоп', 'stop', 'отписаться', 'unsubscribe'],
         callback: () => {
           this.updateUserData(userId, { isUnsubscribed: true });
-          return MESSAGE_UNSUBSCRIBE;
+          return MESSAGES.MESSAGE_UNSUBSCRIBE;
         },
       },
     ]);
@@ -153,7 +158,7 @@ class HCBot {
         ongoingOrderEmployeeMinutesToCome: waitTimeMinutes,
       });
       const { addressNormalized, phoneNumber } = this.getUserDataById(userId);
-      this.sendMessage(userId, template(MESSAGE_EMPLOYEE_FOUND, {
+      this.sendMessage(userId, template(MESSAGES.MESSAGE_EMPLOYEE_FOUND, {
         addressNormalized,
         firstName,
         phoneNumber,
@@ -164,7 +169,7 @@ class HCBot {
       this.sendMessage(userId, null, photoUrl);
     }
     setTimeout(() => {
-      this.sendMessage(userId, MESSAGE_EMPLOYEE_FOUND_ENTER_APT_NUM);
+      this.sendMessage(userId, MESSAGES.MESSAGE_EMPLOYEE_FOUND_ENTER_APT_NUM);
     }, 3000);
   };
 
@@ -188,7 +193,7 @@ class HCBot {
       this.handleEnterAptNum(userId, text);
     }
     else {
-      this.sendMessage(userId, MESSAGE_UNKNOWN_ERROR);
+      this.sendMessage(userId, MESSAGES.MESSAGE_UNKNOWN_ERROR);
     }
   };
 
@@ -211,17 +216,17 @@ class HCBot {
         });
         if (addressNormalized && isWithinDistrict) {
           this.updateUserData(userId, { stage: this.STAGES.STARTED_SEARCHING_EMPLOYEES });
-          this.sendMessage(userId, template(MESSAGE_STARTED_SEARCHING_EMPLOYEES, { addressNormalized }));
+          this.sendMessage(userId, template(MESSAGES.MESSAGE_STARTED_SEARCHING_EMPLOYEES, { addressNormalized }));
         }
         else if (addressNormalized && !isWithinDistrict) {
-          this.sendMessage(userId, MESSAGE_ENTER_ADDRESS_OUT_OF_AREA);
+          this.sendMessage(userId, MESSAGES.MESSAGE_ENTER_ADDRESS_OUT_OF_AREA);
         }
         else {
-          this.sendMessage(userId, MESSAGE_ENTER_ADDRESS_MALFORMED);
+          this.sendMessage(userId, MESSAGES.MESSAGE_ENTER_ADDRESS_MALFORMED);
         }
       })
       .catch(() => {
-        this.sendMessage(userId, MESSAGE_UNKNOWN_ERROR);
+        this.sendMessage(userId, MESSAGES.MESSAGE_UNKNOWN_ERROR);
       });
   };
 
@@ -325,10 +330,10 @@ class HCBot {
         stage: this.STAGES.ENTER_ADDRESS,
         phoneNumber: '+' + formattedPhone,
       });
-      this.sendMessage(userId, MESSAGE_ENTER_ADDRESS);
+      this.sendMessage(userId, MESSAGES.MESSAGE_ENTER_ADDRESS);
     }
     else {
-      this.sendMessage(userId, MESSAGE_ENTER_PHONE_ERROR);
+      this.sendMessage(userId, MESSAGES.MESSAGE_ENTER_PHONE_ERROR);
     }
   };
 
@@ -348,8 +353,8 @@ class HCBot {
             hasRequestedServices,
           });
           return [
-            MESSAGE_SELECT_SERVICE_HAIRCUT,
-            MESSAGE_ENTER_PHONE,
+            MESSAGES.MESSAGE_SELECT_SERVICE_HAIRCUT,
+            MESSAGES.MESSAGE_ENTER_PHONE,
           ];
         },
       },
@@ -376,7 +381,7 @@ class HCBot {
       [serviceType]: getTimestamp(),
     };
     this.updateUserData(userId, { hasRequestedServices });
-    return MESSAGE_SELECT_SERVICE_NOT_PROVIDED_YET;
+    return MESSAGES.MESSAGE_SELECT_SERVICE_NOT_PROVIDED_YET;
   };
 
 
