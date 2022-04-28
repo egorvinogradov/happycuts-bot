@@ -1,0 +1,383 @@
+.order__safe-label--mobile {
+  display: block;
+  right: -10px;
+}
+
+.order {
+  display: none;
+}
+
+.order-mobile {
+  display: block;
+  position: absolute;
+  z-index: 10;
+}
+
+.order-mobile__button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font: 800 26px/75px var(--font-title);
+  background: #FBE76A;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  background: var(--color-red);
+  color: white;
+}
+
+.order-mobile__menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.8);
+  opacity: 0;
+  transition: all 200ms;
+}
+
+.order-mobile__menu-close {
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  top: 5px;
+  padding: 27px;
+  color: white;
+  cursor: pointer;
+  font-size: 36px;
+  font-style: normal;
+}
+
+.order-mobile__menu-list {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-mobile__menu-list .order__item {
+  margin: 0;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  transform: translateX(-40px);
+  opacity: 0;
+  transform-origin: top left;
+}
+
+.order-mobile__menu--expanded {
+  opacity: 1;
+}
+
+.order-mobile__menu--expanded .order-mobile__menu-list .order__item {
+  animation: slide-right 300ms forwards;
+}
+
+.order-mobile__menu--expanded .order-mobile__menu-list .order__item:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.order-mobile__menu--expanded .order-mobile__menu-list .order__item:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.order-mobile__menu--expanded .order-mobile__menu-list .order__item:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.order-mobile__menu-list .order__icon {
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.35));
+  transform: scale(1.2);
+}
+
+.summary {
+  padding: 20px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.summary__title {
+  font-size: 45px;
+  line-height: 47px;
+  max-width: 340px;
+}
+
+.summary__steps {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.summary__demo {
+  flex-basis: auto;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  height: auto;
+  background: none;
+}
+
+.summary__demo-title-mobile {
+  display: block;
+  margin: 25px 0 20px 0;
+  text-align: center;
+  font: bold 40px/45px var(--font-title);
+}
+
+.messenger {
+  width: 100%;
+  height: 85vw;
+  border-width: 1px 0 1px 0;
+  border-radius: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.messenger__balloon {
+  padding: 14px 14px 14px 17px;
+}
+
+.health__title {
+  margin: 50px 0 5px 0;
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.health__title br {
+  display: none;
+}
+
+.health__details {
+  flex-direction: column;
+}
+
+.health__item {
+  width: 100%;
+  max-width: 100%;
+}
+
+.health__item-title {
+  font-size: 24px;
+  line-height: 30px;
+  width: 100%;
+  margin: 30px 0 5px 0;
+}
+
+
+
+/* PRICING */
+
+.pricing--desktop {
+  display: none;
+}
+
+.pricing-mobile {
+  display: block;
+  background: #F5F5F5;
+  text-align: center;
+  padding: 40px 20px 22px 20px;
+  margin-top: 62px;
+}
+
+.pricing-mobile__inner {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.pricing-mobile__title {
+  font: 40px/45px var(--font-title);
+  text-align: center;
+  margin: 0;
+}
+
+.pricing-mobile__subtitle {
+  font-size: 19px;
+  line-height: 25px;
+  margin: 15px 0 35px 0;
+}
+
+.pricing-mobile__service {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pricing-mobile__service:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-mobile__service-title {
+  font: 800 26px/30px var(--font-title);
+  padding: 20px 0 22px 0;
+  margin: 0;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.pricing-mobile__service-arrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-2px) rotate(45deg);
+  margin-left: 4px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.pricing-mobile__service--expanded .pricing-mobile__service-arrow {
+  visibility: hidden;
+}
+
+.pricing-mobile__service-discount {
+  background: var(--color-red);
+  color: white;
+  font: normal 14px/21px var(--font-text);
+  border-radius: 6px;
+  padding: 0 4px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 3px;
+  pointer-events: none;
+}
+
+.pricing-mobile__service-content {
+  transform: scaleY(0.7);
+  transform-origin: top;
+  opacity: 0;
+  padding-top: 20px;
+  transition: all 250ms;
+}
+
+.pricing-mobile__service--expanded .pricing-mobile__service-content {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.pricing-mobile__service--expanded .pricing-mobile__service-title {
+  transform: translateY(15px);
+}
+
+.pricing-mobile__service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-mobile__service-list--shrinked {
+  letter-spacing: -0.03em;
+}
+
+.pricing-mobile__service-item {
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0 0 20px 0;
+}
+
+.pricing-mobile__service-item--has-old-price {
+  margin-bottom: 35px;
+}
+
+.pricing-mobile__service-price {
+  position: relative;
+}
+
+.pricing-mobile__service-old-price {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  font-size: 15px;
+  opacity: .33;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.pricing-mobile__service-old-price:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 12px;
+  height: 1px;
+  overflow: hidden;
+  border-top: 1px solid black;
+}
+
+.pricing-mobile__service-old-price .pricing-mobile__service-currency {
+  padding-left: 2px;
+}
+
+.pricing-mobile__service-currency {
+  padding-left: 4px;
+}
+
+.pricing-mobile__service-comment {
+  font-size: 16px;
+  line-height: 23px;
+  padding: 5px 17px 25px 17px;
+  margin: 0;
+}
+
+
+
+/* FAQ */
+
+.faq__title {
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 0;
+}
+
+.faq__icon {
+  transform: scale(.9);
+}
+
+.faq__list {
+  margin-bottom: 50px;
+}
+
+.faq__question {
+  font-size: 19px;
+  line-height: 22px;
+  text-align: left;
+  padding: 18px 0 18px 20px;
+}
+
+.faq__answer {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 150px;
+}
+
+.footer-row {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1, viewport-fit=cover">
+  <title>HappyCuts — салон красоты у вас дома</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 900px)">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-24995746-9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-24995746-9');
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(64483780, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/64483780" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+
+<div class="order-mobile">
+  <button class="order-mobile__button">Заказать в чат-боте</button>
+  <div class="order-mobile__menu" hidden>
+    <i class="order-mobile__menu-close">✕</i>
+    <ul class="order-mobile__menu-list order__list">
+      <li class="order__item order__item--whatsapp">
+        <a class="order__link" href="https://wa.me/79997122191?text=1‬" target="_blank" title="WhatsApp">
+          <img class="order__icon" src="img/whatsapp.svg" alt="WhatsApp">
+        </a>
+      </li>
+      <li class="order__item order__item--telegram">
+        <a class="order__link" href="https://tttttt.me/test2cutsbot" target="_blank" title="Telegram">
+          <img class="order__icon" src="img/telegram.svg" alt="Telegram">
+        </a>
+      </li>
+      <li class="order__item order__item--vk">
+        <a class="order__link" href="https://vk.com/im?sel=-97679834" target="_blank" title="VK.com">
+          <img class="order__icon" src="img/vkdmsuY29t.svg" alt="VK.com">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="summary">
+  <div class="summary__text">
+    <img class="summary__logo" src="img/logo.png" alt="HappyCuts">
+    <h1 class="summary__title">
+      Салон&nbsp;красоты у&nbsp;вас&nbsp;дома
+      <a class="order__safe-label order__safe-label--mobile" href="#safe">Безопасно!</a>
+    </h1>
+    <ol class="summary__steps">
+      <li class="summary__steps-item">Закажите в чат-боте</li>
+      <li class="summary__steps-item">Система найдёт мастера поблизости</li>
+      <li class="summary__steps-item">Мастер приедет через <span class="m-nw">30 минут</span></li>
+    </ol>
+
+    <div class="order">
+      <h3 class="order__title">
+        Заказать в чат-боте за минуту
+        <a class="order__safe-label" href="#safe">Безопасно!</a>
+      </h3>
+      <ul class="order__list">
+        <li class="order__item order__item--whatsapp">
+          <a class="order__link" href="https://wa.me/79997122191?text=1‬" target="_blank" title="WhatsApp">
+            <img class="order__icon" src="img/whatsapp.svg" alt="WhatsApp">
+          </a>
+        </li>
+        <li class="order__item order__item--telegram">
+          <a class="order__link" href="https://tttttt.me/test2cutsbot" target="_blank" title="Telegram">
+            <img class="order__icon" src="img/telegram.svg" alt="Telegram">
+          </a>
+        </li>
+        <li class="order__item order__item--vk">
+          <a class="order__link" href="https://vk.com/im?sel=-97679834" target="_blank" title="VK.com">
+            <img class="order__icon" src="img/vkdmsuY29t.svg" alt="VK.com">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="summary__demo">
+    <h2 class="summary__demo-title-mobile">Как это работает?</h2>
+
+    <div class="messenger">
+      <ul class="messenger__list">
+        <li class="messenger__item messenger__item--visible">
+          <span class="messenger__sender">HappyCuts bot</span>
+          <div class="messenger__balloon">
+            Выберите услугу:<br>
+            1 — Стрижка<br>
+            2 — Окрашивание<br>
+            3 — Маникюр<br>
+            4 — Педикюр
+          </div>
+        </li>
+        <li class="messenger__item messenger__item--own">
+          <div class="messenger__balloon">1</div>
+        </li>
+        <li class="messenger__item">
+          <span class="messenger__sender">HappyCuts bot</span>
+          <div class="messenger__balloon">
+            Стрижка. Введите улицу и номер дома, и мы найдем парикмахера поблизости:
+          </div>
+        </li>
+        <li class="messenger__item messenger__item--own">
+          <div class="messenger__balloon">тверская 9</div>
+        </li>
+        <li class="messenger__item">
+          <span class="messenger__sender">HappyCuts bot</span>
+          <div class="messenger__balloon">
+            Ищем мастеров рядом с Москва, ул. Тверская, 9
+          </div>
+        </li>
+        <li class="messenger__item">
+          <div class="messenger__balloon">
+            Мастер найден!<br>
+            Парикмахер Анна будет у вас через 28 минут.
+          </div>
+        </li>
+        <li class="messenger__item">
+          <div class="messenger__balloon">
+            Мастер найден!<br>
+            Парикмахер Анна будет у вас через 28 минут.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="health" id="safe">
+  <h2 class="health__title">Как наши мастера заботятся <br>о вашем здоровье?</h2>
+  <ul class="health__details">
+    <li class="health__item">
+      <h3 class="health__item-title">Носят респираторы</h3>
+      <span class="health__item-text">
+        Мастера работают только в респираторах класса FF2, не пропускающих мельчайшие нано&shy;метровые частицы вируса.
+      </span>
+    </li>
+    <li class="health__item">
+      <h3 class="health__item-title">Меняют перчатки</h3>
+      <span class="health__item-text">
+        Перед началом мастер попросит у вас разрешения вымыть руки с мылом, вытрет их своим полотенцем, и при вас оденет новые перчатки.
+      </span>
+    </li>
+    <li class="health__item">
+      <h3 class="health__item-title">Меряют температуру</h3>
+      <span class="health__item-text">
+        Каждый день мастера присылают свежее фото градусника, иначе <span class="m-nw">мы не оправим</span> им заказы.
+      </span>
+    </li>
+    <li class="health__item">
+      <h3 class="health__item-title">Дезинфицируют инструмент</h3>
+      <span class="health__item-text">
+        Перед началом весь инструмент обрабатывается антисептиком прямо <span class="m-nw">при вас.</span>
+      </span>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="pricing-mobile">
+  <div class="pricing-mobile__inner">
+    <h2 class="pricing-mobile__title">Цены</h2>
+    <p class="pricing-mobile__subtitle">Всегда одна стоимость без&nbsp;скрытых&nbsp;наценок</p>
+
+    <div class="pricing-mobile__service-wrapper">
+      <div class="pricing-mobile__service pricing-mobile__service--expanded">
+        <h3 class="pricing-mobile__service-title">
+          Стрижки
+          <span class="pricing-mobile__service-discount">Скидка</span>
+          <i class="pricing-mobile__service-arrow"></i>
+        </h3>
+        <div class="pricing-mobile__service-content">
+          <ul class="pricing-mobile__service-list">
+            <li class="pricing-mobile__service-item pricing-mobile__service-item--has-old-price">
+              Простая стрижка &mdash;
+              <span class="pricing-mobile__service-price">
+              599<span class="pricing-mobile__service-currency">₽</span>
+              <s class="pricing-mobile__service-old-price">
+                700<span class="pricing-mobile__service-currency">₽</span>
+              </s>
+            </span>
+            </li>
+            <li class="pricing-mobile__service-item pricing-mobile__service-item--has-old-price">
+              Средняя стрижка &mdash;
+              <span class="pricing-mobile__service-price">
+              799<span class="pricing-mobile__service-currency">₽</span>
+              <s class="pricing-mobile__service-old-price">
+                900<span class="pricing-mobile__service-currency">₽</span>
+              </s>
+            </span>
+            </li>
+            <li class="pricing-mobile__service-item pricing-mobile__service-item--has-old-price">
+              Сложная стрижка &mdash;
+              <span class="pricing-mobile__service-price">
+              999<span class="pricing-mobile__service-currency">₽</span>
+              <s class="pricing-mobile__service-old-price">
+                1200<span class="pricing-mobile__service-currency">₽</span>
+              </s>
+            </span>
+            </li>
+          </ul>
+          <p class="pricing-mobile__service-comment">
+            Объясните мастеру, как вы хотите постричься, и он скажет, какая стижка: простая, средняя или сложная.
+          </p>
+        </div>
+      </div>
+
+      <div class="pricing-mobile__service">
+        <h3 class="pricing-mobile__service-title">
+          Окрашивание
+          <i class="pricing-mobile__service-arrow"></i>
+        </h3>
+        <div class="pricing-mobile__service-content" hidden>
+          <ul class="pricing-mobile__service-list pricing-mobile__service-list--shrinked">
+            <li class="pricing-mobile__service-item">
+              Простое окрашивание &mdash; 999<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+            <li class="pricing-mobile__service-item">
+              Среднее окрашивание &mdash; 1199<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+            <li class="pricing-mobile__service-item">
+              Сложное окрашивание &mdash; 1399<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+          </ul>
+          <p class="pricing-mobile__service-comment">
+            Объясните мастеру, какое вы хотите окрашивание, и он скажет, простое оно, среднее или сложное.
+          </p>
+        </div>
+      </div>
+
+      <div class="pricing-mobile__service">
+        <h3 class="pricing-mobile__service-title">
+          Маникюр
+          <i class="pricing-mobile__service-arrow"></i>
+        </h3>
+        <div class="pricing-mobile__service-content" hidden>
+          <ul class="pricing-mobile__service-list">
+            <li class="pricing-mobile__service-item">
+              Простой маникюр &mdash; 699<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+            <li class="pricing-mobile__service-item">
+              Средний маникюр &mdash; 899<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+            <li class="pricing-mobile__service-item">
+              Сложный маникюр &mdash; 1199<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+          </ul>
+          <p class="pricing-mobile__service-comment">
+            Объясните мастеру, какой вы хотите маникюр, и он скажет, простой он, средний или сложный.
+          </p>
+        </div>
+      </div>
+
+      <div class="pricing-mobile__service">
+        <h3 class="pricing-mobile__service-title">
+          Педикюр
+          <i class="pricing-mobile__service-arrow"></i>
+        </h3>
+        <div class="pricing-mobile__service-content" hidden>
+          <ul class="pricing-mobile__service-list">
+            <li class="pricing-mobile__service-item">
+              Простой педикюр &mdash; 699<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+            <li class="pricing-mobile__service-item">
+              Средний педикюр &mdash; 899<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+            <li class="pricing-mobile__service-item">
+              Сложный педикюр &mdash; 1199<span class="pricing-mobile__service-currency">₽</span>
+            </li>
+          </ul>
+          <p class="pricing-mobile__service-comment">
+            Объясните мастеру, какой вы хотите педикюр, и он скажет, простой он, средний или сложный.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="pricing pricing--desktop">
+  <div class="pricing__inner">
+    <h2 class="pricing__title">Цены</h2>
+    <p class="pricing__subtitle">
+      Объясните мастеру, что именно вы хотите, и он скажет, просто это, средне или сложно.
+    </p>
+
+    <div class="pricing__table">
+      <div class="pricing__table-row pricing__table-row-head">
+        <div class="pricing__table-cell pricing__table-cell--title"></div>
+        <div class="pricing__table-cell pricing__table-cell--price">Просто</div>
+        <div class="pricing__table-cell pricing__table-cell--price">Средне</div>
+        <div class="pricing__table-cell pricing__table-cell--price">Сложно</div>
+      </div>
+
+      <div class="pricing__table-row pricing__table-row-highlighted">
+        <h3 class="pricing__table-cell">
+          Стрижка
+          <span class="pricing__discount-label">Скидка</span>
+        </h3>
+        <div class="pricing__table-cell">
+          599
+          <span class="pricing__currency">₽</span>
+          <s class="pricing__original-price">700 <span class="pricing__currency">₽</span></s>
+        </div>
+        <div class="pricing__table-cell">
+          799
+          <span class="pricing__currency">₽</span>
+          <s class="pricing__original-price">900 <span class="pricing__currency">₽</span></s>
+        </div>
+        <div class="pricing__table-cell">
+          999
+          <span class="pricing__currency">₽</span>
+          <s class="pricing__original-price">1100 <span class="pricing__currency">₽</span></s>
+        </div>
+      </div>
+
+      <div class="pricing__table-row">
+        <h3 class="pricing__table-cell">
+          Окрашивание
+        </h3>
+        <div class="pricing__table-cell">
+          999
+          <span class="pricing__currency">₽</span>
+        </div>
+        <div class="pricing__table-cell">
+          1199
+          <span class="pricing__currency">₽</span>
+        </div>
+        <div class="pricing__table-cell">
+          1399
+          <span class="pricing__currency">₽</span>
+        </div>
+      </div>
+
+      <div class="pricing__table-row">
+        <h3 class="pricing__table-cell">
+          Маникюр
+        </h3>
+        <div class="pricing__table-cell">
+          699
+          <span class="pricing__currency">₽</span>
+        </div>
+        <div class="pricing__table-cell">
+          899
+          <span class="pricing__currency">₽</span>
+        </div>
+        <div class="pricing__table-cell">
+          1199
+          <span class="pricing__currency">₽</span>
+        </div>
+      </div>
+
+      <div class="pricing__table-row">
+        <h3 class="pricing__table-cell">
+          Педикюр
+        </h3>
+        <div class="pricing__table-cell">
+          699
+          <span class="pricing__currency">₽</span>
+        </div>
+        <div class="pricing__table-cell">
+          899
+          <span class="pricing__currency">₽</span>
+        </div>
+        <div class="pricing__table-cell">
+          1199
+          <span class="pricing__currency">₽</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="order">
+      <h3 class="order__title">Заказать в чат-боте за минуту</h3>
+      <ul class="order__list">
+        <li class="order__item order__item--whatsapp">
+          <a class="order__link" href="https://wa.me/79997122191?text=1‬" target="_blank" title="WhatsApp">
+            <img class="order__icon" src="img/whatsapp.svg" alt="WhatsApp">
+          </a>
+        </li>
+        <li class="order__item order__item--telegram">
+          <a class="order__link" href="https://tttttt.me/test2cutsbot" target="_blank" title="Telegram">
+            <img class="order__icon" src="img/telegram.svg" alt="Telegram">
+          </a>
+        </li>
+        <li class="order__item order__item--vk">
+          <a class="order__link" href="https://vk.com/im?sel=-97679834" target="_blank" title="VK.com">
+            <img class="order__icon" src="img/vkdmsuY29t.svg" alt="VK.com">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="faq">
+  <i class="faq__icon"></i>
+  <h2 class="faq__title">Вопросы и ответы</h2>
+
+  <dl class="faq__list">
+    <dt class="faq__question">Как вызвать мастера?</dt>
+    <dd class="faq__answer">
+      test <br>test <br>test <br>test <br>test <br>test <br>
+    </dd>
+
+    <dt class="faq__question">Какие услуги оказываете?</dt>
+    <dd class="faq__answer">
+      test <br>test <br>test <br>test <br>test <br>test <br>
+    </dd>
+
+    <dt class="faq__question">Сколько стоит?</dt>
+    <dd class="faq__answer">
+      test <br>test <br>test <br>test <br>test <br>test <br>
+    </dd>
+
+    <dt class="faq__question">Где доступен HappyCuts?</dt>
+    <dd class="faq__answer">
+      test <br>test <br>test <br>test <br>test <br>test <br>
+    </dd>
+
+    <dt class="faq__question">По какому графику работаете?</dt>
+    <dd class="faq__answer">
+      test <br>test <br>test <br>test <br>test <br>test <br>
+    </dd>
+
+    <dt class="faq__question">Как с вами связаться?</dt>
+    <dd class="faq__answer">
+      test <br>test <br>test <br>test <br>test <br>test <br>
+    </dd>
+
+    <dt class="faq__question">Меня не заразят коронавирусом?</dt>
+    <dd class="faq__answer">
+      <p>Нет.</p>
+      <p>
+        1. Каждый день наши мастера меряют температуру. Мы не оправим им заказы, пока они
+        не пришлют свежее фото градусника.
+      </p>
+      <p>
+        2. Мастера работают только в респираторах класса FF2. Такие респираторы фильтруют
+        мельчайшие нанометровые частицы, и не пропускают вирус. В таких респираторах
+        работают доктора.
+      </p>
+      <p>
+        3. Мастера работают только в одноразовых перчатках. Когда мастер придет к вам,
+        он/она попросит у вас разрешения вымыть руки с мылом и вытрет их своим полотенцем,
+        а потом при вас оденет новые перчатки.
+      </p>
+      <p>
+        4. Мастера дезинфицируют свой инструмент при вас перед началом работы.
+      </p>
+    </dd>
+  </dl>
+
+  <div class="order">
+    <h3 class="order__title">Заказать в чат-боте за минуту</h3>
+    <ul class="order__list">
+      <li class="order__item order__item--whatsapp">
+        <a class="order__link" href="https://wa.me/79997122191?text=1‬" target="_blank" title="WhatsApp">
+          <img class="order__icon" src="img/whatsapp.svg" alt="WhatsApp">
+        </a>
+      </li>
+      <li class="order__item order__item--telegram">
+        <a class="order__link" href="https://tttttt.me/test2cutsbot" target="_blank" title="Telegram">
+          <img class="order__icon" src="img/telegram.svg" alt="Telegram">
+        </a>
+      </li>
+      <li class="order__item order__item--vk">
+        <a class="order__link" href="https://vk.com/im?sel=-97679834" target="_blank" title="VK.com">
+          <img class="order__icon" src="img/vkdmsuY29t.svg" alt="VK.com">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<footer class="footer">
+  <p class="footer-row">
+    <img class="footer-icon" src="img/masked-emoji.png">
+    Берегите себя!
+  </p>
+  <p class="footer-row">HappyCuts, 2020</p>
+</footer>
+
+
+
+
+<script src="scripts.js"></script>
+</body>
+</html>
