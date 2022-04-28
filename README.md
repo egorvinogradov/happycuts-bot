@@ -10,9 +10,9 @@
 2. The app finds a hair stylist nearby
 3. The stylist arrives in 30 minutes
 
-<img width="50%" src="https://user-images.githubusercontent.com/1618344/165695909-151b59db-0558-4ead-b665-03f019e404c6.gif">
+<img width="70%" src="https://user-images.githubusercontent.com/1618344/165695909-151b59db-0558-4ead-b665-03f019e404c6.gif">
 
 ---
 
 ### NodeJS-based chatbot for Telegram
-<img width="22%" src="https://user-images.githubusercontent.com/1618344/165696987-18fa7cdd-a936-49cb-a436-e95e322ee18e.gif">
+<img width="30%" src="https://user-images.githubusercontent.com/1618344/165696987-18fa7cdd-a936-49cb-a436-e95e322ee18e.gif">
